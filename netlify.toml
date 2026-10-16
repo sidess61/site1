@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  command = "echo Publishing diary with serverless search"
+
+[functions]
+  directory = "netlify/functions"
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Cache-Control = "no-store"
+    X-Content-Type-Options = "nosniff"
